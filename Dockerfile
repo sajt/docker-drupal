@@ -12,7 +12,8 @@ RUN apt-get update && \
     unzip \
     zip \
     sqlite3 \
-    openssh-client
+    openssh-client \
+    nvim 
 
 COPY install-dependencies.sh ./install-dependencies.sh
 RUN ./install-dependencies.sh
