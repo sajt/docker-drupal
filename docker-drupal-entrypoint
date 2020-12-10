@@ -37,6 +37,7 @@ else
     composer create-project drupal/recommended-project:$DRUPAL_VERSION /drupal
     composer require --dev drupal/core-dev:$DRUPAL_VERSION
     composer require drush/drush
+    composer require drupal/commerce
     mkdir /drupal/web/sites/default/files #Public files 
     mkdir /drupal/files                   #Private files
     mkdir /drupal/config                  #Configurations 

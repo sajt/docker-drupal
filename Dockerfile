@@ -1,4 +1,4 @@
-FROM php:7.4-apache-buster as base
+FROM php:8.0-apache-buster as base
 WORKDIR /tmp
 RUN apt-get update && \ 
     apt-get install -y --no-install-recommends \ 
@@ -13,7 +13,7 @@ RUN apt-get update && \
     zip \
     sqlite3 \
     openssh-client \
-    nvim 
+    neovim 
 
 COPY install-dependencies.sh ./install-dependencies.sh
 RUN ./install-dependencies.sh

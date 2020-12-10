@@ -1,5 +1,5 @@
-docker pull php:cli 
-docker run -ti -v $PWD/xml.php:/xml.php php:cli php /xml.php > /tmp/versions
+# docker pull php:cli 
+# docker run -ti -v $PWD/xml.php:/xml.php php:cli php /xml.php > /tmp/versions
 IFS=" "
 while read version fullVersion url md5
 do
@@ -14,4 +14,4 @@ do
         BUILDKIT_PROGRESS=plain docker build --build-arg="DRUPAL_VERSION=$fullVersion" -t sajt/drupal:latest .
         docker push sajt/drupal:latest
     fi
-done < /tmp/versions
+done < versions
